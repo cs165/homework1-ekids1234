@@ -1,3 +1,125 @@
 /**
  TODO(you): Write the CSS necessary to complete HW1!
 */
+
+@font-face {
+    font-family: 'Roboto Slab', serif;
+}
+
+header {
+    text-align: center;
+    background-image: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .3)), url("../images/header.jpg");
+    font-size: 36px;
+    font-weight: normal;
+    font-family: 'Roboto Slab';
+    color: white;
+    height: 500px;
+    text-align: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    /* The title is vertical and center aligned to the header image. */
+}
+
+header div {
+    margin: auto auto;
+    width: 780px; 
+    text-align: center;
+}
+
+.wrapper {
+    text-align: center;
+}
+
+.profile {
+    text-align: center;
+}
+
+.profile img {
+    border-radius: 100%;
+    height: 100px;
+    margin-top: -50px;
+    border: 1px solid white;
+}
+
+.p1,
+.p2 {
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Source Sans Pro', 'sans-serif';
+    color: rgb(51, 51, 51);
+    line-height: 24px;
+    margin: 0 0;
+}
+
+.p2 {
+    font-style: italic;
+    text-decoration: underline;
+    text-decoration-color: #e6e6e6;
+    /*
+        The gray line under the “Last updated” line is 10px under the text, 2px wide, and the color is #e6e6e6.
+        ???
+    */
+}
+
+.article {
+    margin: 60px auto;
+    width: 66.67%;
+    text-align: left;
+}
+
+.article .title {
+    font-family: 'Roboto Slab', 'sans-serif';
+    font-size: 36px;
+    font-weight: bold;
+    /* The number’s color is rgba(0, 0, 0, 0.25). */
+    color: rgb(51, 51, 51);
+    margin: 0 0;
+}
+
+.article .title::before {
+    content: counter(my-badass-counter);
+    position: absolute;
+    margin-right: 40px;
+    margin-left: -8px;
+    /* font: bold 50px/1 "Poppins", Sans-Serif; */
+    font-weight: bold;
+    font-stretch: normal;
+    font-size: 50px;
+    line-height: 1;
+    font-family: Poppins, sans-serif;
+}
+
+.article a {
+    font-family: 'Roboto Slab', 'sans-serif';
+    color: #42b4d6;
+    text-decoration: none;
+    /* width:2/3; */
+}
+
+.article a:hover {
+    text-decoration: underline;
+}
+
+.article .paragraph {
+    font-family: 'Source Sans Pro', 'sans-serif';
+    font-size: 18px;
+    line-height: 32px;
+    color: rgb(51, 51, 51);
+    margin: 20px auto;
+}
+
+.article .recommand {
+    font-family: 'Source Sans Pro', 'sans-serif';
+    font-size: 18px;
+    line-height: 32px;
+    color: rgb(51, 51, 51);
+    margin-bottom: 20px;
+}
+
+.article img {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    max-width: 100%;
+}
