@@ -1,5 +1,5 @@
 /**
- TODO(you): Write the CSS necessary to complete HW1!
+    Write by MeteorV 404410079
 */
 
 @font-face {
@@ -104,7 +104,6 @@ dt.title p {
 
 body {
     counter-reset: my-badass-counter;
-    /* 重置计数器成0 */
 }
 
 .wrapper .title p::before {
