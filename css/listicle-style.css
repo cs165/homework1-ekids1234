@@ -6,7 +6,13 @@
     font-family: 'Roboto Slab', serif;
 }
 
+body {
+    padding: 0;
+    margin: 0;
+}
+
 header {
+    margin: 0;
     text-align: center;
     background-image: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .3)), url("../images/header.jpg");
     font-size: 36px;
@@ -22,13 +28,17 @@ header {
 }
 
 header div {
+    padding: 190px;
+}
+
+header div p {
     margin: auto auto;
-    width: 780px; 
+    width: 780px;
     text-align: center;
 }
 
 .wrapper {
-    text-align: center;
+    text-align: left;
 }
 
 .profile {
@@ -54,8 +64,11 @@ header div {
 
 .p2 {
     font-style: italic;
-    text-decoration: underline;
-    text-decoration-color: #e6e6e6;
+    /* text-decoration: underline; */
+    /* text-decoration-color: #e6e6e6; */
+    display: inline;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e6e6e6;
     /*
         The gray line under the “Last updated” line is 10px under the text, 2px wide, and the color is #e6e6e6.
         ???
@@ -63,31 +76,45 @@ header div {
 }
 
 .article {
-    margin: 60px auto;
+    margin: 0 auto;
+    width: 80.67%;
+    text-align: left;
+}
+
+.context {
+    margin: auto auto;
     width: 66.67%;
     text-align: left;
 }
 
-.article .title {
+.title {
+    margin-top: 60px;
+}
+
+dt.title p {
     font-family: 'Roboto Slab', 'sans-serif';
+    position: relative;
+    padding-left: 76px;
     font-size: 36px;
     font-weight: bold;
     /* The number’s color is rgba(0, 0, 0, 0.25). */
     color: rgb(51, 51, 51);
-    margin: 0 0;
+    margin: 0 17%;
 }
 
-.article .title::before {
-    content: counter(my-badass-counter);
+body {
+    counter-reset: my-badass-counter;
+    /* 重置计数器成0 */
+}
+
+.wrapper .title p::before {
+    content: counter(my-badass-counter, decimal) '.';
+    counter-increment: my-badass-counter;
+    font: bold 36px/1 inherit;
+    color: rgba(0, 0, 0, 0.25);
+    left: 0;
     position: absolute;
-    margin-right: 40px;
-    margin-left: -8px;
-    /* font: bold 50px/1 "Poppins", Sans-Serif; */
-    font-weight: bold;
-    font-stretch: normal;
-    font-size: 50px;
-    line-height: 1;
-    font-family: Poppins, sans-serif;
+    top: 0;
 }
 
 .article a {
